@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+section {
+  height: 100vh;
+  background-color: rgba(230, 230, 230, 0.986);
+}
+.score {
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.score h3 {
+  color: rgb(24, 24, 24);
+  font-size: 21px;
+}
+.score p {
+  color: rgb(24, 24, 24);
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+.intro {
+  color: rgb(24, 24, 24);
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: opacity 0.5s ease;
+}
+.intro h1 {
+  font-size: 48px;
+}
+.intro button {
+  padding: 15px;
+  width: 120px;
+  background-color: rgb(24, 24, 24);
+  color: rgb(214, 211, 211);
+  border: none;
+  border-radius: 2px;
+}
+.match {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease 0.5s;
+}
+.board {
+  color: rgb(24, 24, 24);
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 30px;
+}
+.hands {
+  display: flex;
+}
+.hands img {
+  width: 200px;
+}
+.hands .player-hand {
+  transform: rotateY(180deg);
+}
+.options {
+  display: flex;
+  justify-content: space-around;
+  transition: opacity 0.5s ease 0.5s;
+}
+.options button {
+  margin-left: 25px;
+  padding: 9px 18px;
+  background-color: rgb(24, 24, 24);
+  color: rgb(214, 211, 211);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@keyframes shakePlayer {
+  0% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  15% {
+    transform: rotateY(180deg) translateY(-10px);
+  }
+  25% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  35% {
+    transform: rotateY(180deg) translateY(-10px);
+  }
+  50% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  65% {
+    transform: rotateY(180deg) translateY(-10px);
+  }
+  75% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+  85% {
+    transform: rotateY(180deg) translateY(-10px);
+  }
+  100% {
+    transform: rotateY(180deg) translateY(0px);
+  }
+}
+
+@keyframes shakeComputer {
+  0% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-10px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  65% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(0px);
+  }
+  85% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
